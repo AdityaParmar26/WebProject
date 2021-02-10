@@ -1,4 +1,5 @@
 const express = require("express");
+const port = process.env.PORT || 8080;
 const app = express();
 const path = require("path");
 
@@ -20,6 +21,6 @@ app.get("/*", (req, res) => {
     res.render("errorPage");
 });
 
-app.listen(8080, () => {
+app.listen(port, () => {
     console.log("listening to port..");
 });
